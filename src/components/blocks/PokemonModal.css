@@ -1,0 +1,62 @@
+.pokemon__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.pokemon__modal_opened {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.pokemon__modal_container {
+  max-width: 45%;
+  max-height: 80%;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon__modal_title {
+  margin: 0;
+  text-align: center;
+  justify-self: center;
+  grid-column: 2;
+}
+
+.pokemon__modal_image {
+  max-width: 80px;
+}
+
+.pokemon__modal_close-button {
+  background-image: url("data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M15.7023%201.70711C16.0929%201.31658%2016.0929%200.683417%2015.7023%200.292893C15.3118%20-0.0976311%2014.6787%20-0.0976311%2014.2881%200.292893L7.99805%206.58298L1.70796%200.292893C1.31744%20-0.0976311%200.684274%20-0.0976311%200.29375%200.292893C-0.096775%200.683417%20-0.096775%201.31658%200.29375%201.70711L6.58383%207.99719L0.292893%2014.2881C-0.0976311%2014.6787%20-0.0976311%2015.3118%200.292893%2015.7023C0.683417%2016.0929%201.31658%2016.0929%201.70711%2015.7023L7.99805%209.4114L14.289%2015.7023C14.6795%2016.0929%2015.3127%2016.0929%2015.7032%2015.7023C16.0937%2015.3118%2016.0937%2014.6787%2015.7032%2014.2881L9.41226%207.99719L15.7023%201.70711Z'%20fill='black'%20fill-opacity='0.3'/%3e%3c/svg%3e");
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  justify-self: end;
+  background-repeat: no-repeat;
+}
+
+.pokemon__modal_title-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}

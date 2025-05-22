@@ -1,0 +1,15 @@
+.pokemon__item-card_container {
+  list-style: none;
+  width: 350px;
+  background-color: rgb(207, 207, 234);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.pokemon__item-card_container:hover {
+  cursor: pointer;
+}
+
+.pokemon__image {
+  width: 100%;
+}
