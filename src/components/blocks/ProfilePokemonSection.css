@@ -1,0 +1,18 @@
+.profile__pokemon-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+}
+
+.profile__pokemon-section_title {
+  color: rgb(207, 207, 234);
+  text-align: right;
+}
+
+.profile__pokemon-section_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+}

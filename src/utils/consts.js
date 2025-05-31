@@ -7,4 +7,6 @@ const popularPokemonIDs = [
   1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008,
 ];
 
-export { popularPokemonIDs };
+const favoritePokemonIDs = [0, 1, 5, 9, 15, 66, 67, 80, 85];
+
+export { popularPokemonIDs, favoritePokemonIDs };

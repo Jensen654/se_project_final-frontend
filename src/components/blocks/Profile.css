@@ -1,0 +1,5 @@
+.profile__page {
+  display: flex;
+  padding: 40px;
+  min-height: 600px;
+}

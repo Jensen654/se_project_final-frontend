@@ -1,17 +1,19 @@
 #root {
-  display: flex;
-  justify-content: center;
   background-color: rgb(207, 207, 234);
+  min-height: 100vh;
 }
 
 .page {
-  max-width: 1440px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .page-content {
   max-width: 1220px;
   background-color: rgb(30, 35, 64);
-  font-family: "Cabinet Grotesk";
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 20px;
+  width: 100%;
 }

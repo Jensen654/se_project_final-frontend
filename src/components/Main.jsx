@@ -12,7 +12,6 @@ function Main({ onClick }) {
       <ul className="pokemon__list">
         {pokemon.length > 0 &&
           pokemon.map((card) => {
-            console.log(card.index);
             return (
               <ItemCard
                 name={card.name}
@@ -21,6 +20,7 @@ function Main({ onClick }) {
                 key={card.idNumber}
                 onClick={onClick}
                 index={card.index}
+                type={card.type}
               />
             );
           })}
