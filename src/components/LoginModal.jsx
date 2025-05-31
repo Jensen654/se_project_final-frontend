@@ -11,11 +11,12 @@ function LoginModal() {
   // const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
+  const isOpen = activeModal == "login-modal";
 
   useEffect(() => {
     setName("");
     setAvatarUrl("");
-  }, [activeModal == "login-modal"]);
+  }, [isOpen]);
 
   // const handleEmailChange = (e) => {
   //   setEmail(e.target.value);

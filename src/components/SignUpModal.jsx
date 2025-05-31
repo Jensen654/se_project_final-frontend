@@ -11,13 +11,14 @@ function SignUpModal() {
   const [avatarUrl, setAvatarUrl] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const isOpen = activeModal == "signup-modal";
 
   useEffect(() => {
     setName("");
     setAvatarUrl("");
     setPassword("");
     setEmail("");
-  }, [activeModal == "signup-modal"]);
+  }, [isOpen]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);

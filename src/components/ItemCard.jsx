@@ -2,7 +2,7 @@ import "./blocks/ItemCard.css";
 import { useContext } from "react";
 import UserDataContext from "../contexts/UserDataContext";
 
-function ItemCard({ name, image, idNumber, onClick, index, type }) {
+function ItemCard({ name, image, idNumber, onClick, type }) {
   const { favoritePokemon, setFavoritePokemon, user } =
     useContext(UserDataContext);
 
