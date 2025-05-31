@@ -1,0 +1,60 @@
+.profile__side-bar {
+  display: flex;
+  max-height: 60px;
+  align-items: start;
+  color: rgb(207, 207, 234);
+  max-width: 300px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.profile__side-bar_image {
+  max-height: 60px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.profile__side-bar_user {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100px;
+}
+
+.profile__side-bar_label {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__side-bar_button {
+  background-color: transparent;
+  border: none;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  color: rgb(207, 207, 234);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.profile__side-bar_pokemon-search {
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile__side-bar_input {
+  margin-top: 10px;
+}
+
+.profile__side-bar_submit-button {
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  color: rgb(207, 207, 234);
+  cursor: pointer;
+}
