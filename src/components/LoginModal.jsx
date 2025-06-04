@@ -53,7 +53,7 @@ function LoginModal() {
           value={name}
           onChange={handleNameChange}
           type="text"
-          className="modal__input"
+          className="modal__label-input"
           id="login-name"
           placeholder="Name"
           required
@@ -65,7 +65,7 @@ function LoginModal() {
           value={avatarUrl}
           onChange={handleAvatarUrlChange}
           type="url"
-          className="modal__input"
+          className="modal__label-input"
           id="login-avatarUrl"
           placeholder="Avatar URL"
           required

@@ -8,8 +8,8 @@ function Main({ onClick }) {
   const { pokemon } = useContext(PokeDataContext);
 
   return (
-    <div className="main">
-      <ul className="pokemon__list">
+    <main>
+      <ul className="pokemon-list">
         {pokemon.length > 0 &&
           pokemon.map((card) => {
             return (
@@ -26,7 +26,7 @@ function Main({ onClick }) {
           })}
       </ul>
       <PokemonModal />
-    </div>
+    </main>
   );
 }
 

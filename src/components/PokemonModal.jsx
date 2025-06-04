@@ -36,29 +36,29 @@ function PokemonModal() {
 
   return (
     <div
-      className={`pokemon__modal ${
-        activeModal === "pokemon-modal" && "pokemon__modal_opened"
+      className={`pokemon-modal ${
+        activeModal === "pokemon-modal" && "pokemon-modal_opened"
       }`}
     >
-      <div className="pokemon__modal_container">
-        <div className="pokemon__modal_title-container">
+      <div className="pokemon-modal__container">
+        <div className="pokemon-modal__title-container">
           <button
-            className={`pokemon__modal_save-button ${
+            className={`pokemon-modal__save ${
               favoritePokemon?.includes(findPokemon()?.idNumber)
-                ? "pokemon__modal_save-button_filled"
+                ? "pokemon-modal__save_filled"
                 : ""
             }`}
             type="button"
             onClick={handleSaveClick}
           ></button>
-          <h2 className="pokemon__modal_title">{findPokemon()?.name}</h2>
+          <h2 className="pokemon-modal__title">{findPokemon()?.name}</h2>
           <button
-            className="pokemon__modal_close-button"
+            className="pokemon-modal__close"
             type="button"
             onClick={handleCloseModalClick}
           ></button>
         </div>
-        <p className="pokemon__modal_description">
+        <p className="pokemon-modal__description">
           Type: {findPokemon()?.type} <br />
           Pokedex number: {findPokemon()?.idNumber} <br />
           Height: {findPokemon()?.height / 10} meters <br />
@@ -68,7 +68,7 @@ function PokemonModal() {
           {findPokemon()?.flavorText[0]?.flavor_text}
         </p>
         <img
-          className="pokemon__modal_image"
+          className="pokemon-modal__image"
           src={findPokemon()?.altImage}
           alt={findPokemon()?.name}
         />

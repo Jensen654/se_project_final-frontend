@@ -1,4 +1,4 @@
-.pokemon__list {
+.pokemon-list {
   display: flex;
   max-width: 100%;
   flex-wrap: wrap;

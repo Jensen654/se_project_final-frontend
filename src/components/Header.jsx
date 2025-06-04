@@ -7,37 +7,44 @@ import PageDataContext from "../contexts/PageDataContext";
 
 function Header() {
   const { user } = useContext(UserDataContext);
-  const { handleLoginClick } = useContext(PageDataContext);
+  const { handleLoginClick, handleSignUpClick } = useContext(PageDataContext);
 
   return (
-    <div className="header">
-      <Link to={"/"}>
-        <img className="header__logo" src={reactLogo} alt="Logo" />
+    <header className="header">
+      <Link className="header__logo" to={"/"}>
+        <img src={reactLogo} alt="Logo" />
       </Link>
       <h1 className="header__title">My Pokedex</h1>
       {user?.name.length > 0 ? (
-        <Link to={"/profile"} className="header__profile_link">
-          <div className="header__profile">
-            <p className="header__user-name">{user.name}</p>
+        <Link to={"/profile"} className="header__profile">
+          <div className="header__profile-content">
+            <p className="header__profile-name">{user.name}</p>
             <img
-              className="header__user-image"
+              className="header__profile-image"
               src={user.avatarUrl}
               alt="User Image"
             />
           </div>
         </Link>
       ) : (
-        <div className="header__profile">
+        <div className="header__profile-content">
           <button
             type="button"
             className="header__button"
             onClick={handleLoginClick}
           >
-            Sign Up and Log In
+            Log In
+          </button>
+          <button
+            type="button"
+            className="header__button"
+            onClick={handleSignUpClick}
+          >
+            Sign Up
           </button>
         </div>
       )}
-    </div>
+    </header>
   );
 }
 

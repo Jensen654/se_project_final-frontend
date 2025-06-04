@@ -11,9 +11,9 @@ function ProfilePokemonSection() {
   const { handlePokemonCardClick, loading } = useContext(PageDataContext);
 
   return (
-    <div className="profile__pokemon-section">
-      <h2 className="profile__pokemon-section_title">My Favorites</h2>
-      <ul className="profile__pokemon-section_list">
+    <section className="profile__pokemon-section">
+      <h2 className="profile__pokemon-section-title">My Favorites</h2>
+      <ul className="profile__pokemon-section-list">
         {favePokemonData.length > 0 &&
           favePokemonData.map((poke) => {
             return (
@@ -31,7 +31,7 @@ function ProfilePokemonSection() {
       </ul>
       <PokemonModal />
       {loading && <Preloader />}
-    </div>
+    </section>
   );
 }
 

@@ -36,7 +36,7 @@ function EditProfileModal() {
           value={name}
           onChange={handleNameChange}
           type="text"
-          className="modal__input"
+          className="modal__label-input"
           id="edit-name"
           placeholder="Name"
           required
@@ -48,7 +48,7 @@ function EditProfileModal() {
           value={avatarUrl}
           onChange={handleAvatarUrlChange}
           type="url"
-          className="modal__input"
+          className="modal__label-input"
           id="edit-avatarUrl"
           placeholder="Avatar URL"
           required

@@ -21,18 +21,20 @@ function ItemCard({ name, image, idNumber, onClick, type }) {
   };
 
   return (
-    <li className="pokemon__item-card_container" onClick={handleClick}>
-      <img className="pokemon__image" src={image} alt="Pokemon" />
+    <li className="item-card" onClick={handleClick}>
+      <img className="item-card__image" src={image} alt="Pokemon" />
       {user.name?.length > 0 && (
         <button
-          className={`pokemon__button ${
-            favoritePokemon?.includes(idNumber) ? "pokemon__button-filled" : ""
+          className={`item-card__button ${
+            favoritePokemon?.includes(idNumber)
+              ? "item-card__button_filled"
+              : ""
           }`}
           type="button"
           onClick={handleSaveClick}
         ></button>
       )}
-      <p className="pokemon__name">
+      <p className="item-card__name">
         Name: {name} <br /> Type: {type}
       </p>
     </li>

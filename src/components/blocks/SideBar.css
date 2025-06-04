@@ -1,6 +1,5 @@
-.profile__side-bar {
+.side-bar {
   display: flex;
-  max-height: 60px;
   align-items: start;
   color: rgb(207, 207, 234);
   max-width: 300px;
@@ -8,7 +7,14 @@
   flex-direction: column;
 }
 
-.profile__side-bar_image {
+.side-bar__user {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100px;
+}
+
+.side-bar__user-image {
   max-height: 60px;
   object-fit: contain;
   border-radius: 20px;
@@ -16,19 +22,7 @@
   height: 100%;
 }
 
-.profile__side-bar_user {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
-  max-height: 100px;
-}
-
-.profile__side-bar_label {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile__side-bar_button {
+.side-bar__button {
   background-color: transparent;
   border: none;
   font-family: "Cabinet Grotesk", sans-serif;
@@ -38,18 +32,23 @@
   margin-top: 10px;
 }
 
-.profile__side-bar_pokemon-search {
+.side-bar__form {
   border: 1px solid;
   padding: 10px;
   text-align: center;
   margin-top: 30px;
 }
 
-.profile__side-bar_input {
+.side-bar__form-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar__form-input {
   margin-top: 10px;
 }
 
-.profile__side-bar_submit-button {
+.side-bar__form-submit {
   background-color: transparent;
   border: none;
   margin-top: 10px;
@@ -57,4 +56,17 @@
   font-weight: 700;
   color: rgb(207, 207, 234);
   cursor: pointer;
+}
+
+.side-bar__user-name {
+  max-height: 100px;
+  text-wrap: wrap;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 750px) {
+  .side-bar {
+    align-items: center;
+  }
 }

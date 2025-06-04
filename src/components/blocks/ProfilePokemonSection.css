@@ -5,14 +5,24 @@
   width: 100%;
 }
 
-.profile__pokemon-section_title {
+.profile__pokemon-section-title {
   color: rgb(207, 207, 234);
   text-align: right;
 }
 
-.profile__pokemon-section_list {
+.profile__pokemon-section-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: end;
+}
+
+@media screen and (max-width: 750px) {
+  .profile__pokemon-section {
+    align-items: center;
+  }
+  .profile__pokemon-section-list {
+    justify-content: center;
+    padding: 0;
+  }
 }

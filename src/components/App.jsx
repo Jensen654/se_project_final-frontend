@@ -153,6 +153,10 @@ function App() {
     setActiveModal("");
   };
 
+  const stopModalPropagation = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div className="page">
       <UserDataContext.Provider
@@ -174,6 +178,7 @@ function App() {
             handleLoginClick,
             handleSignUpClick,
             loading,
+            stopModalPropagation,
           }}
         >
           <PokeDataContext.Provider

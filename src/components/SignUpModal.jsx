@@ -5,7 +5,7 @@ import PageDataContext from "../contexts/PageDataContext";
 import UserDataContext from "../contexts/UserDataContext";
 
 function SignUpModal() {
-  const { activeModal } = useContext(PageDataContext);
+  const { activeModal, setActiveModal } = useContext(PageDataContext);
   const { setUser } = useContext(UserDataContext);
   const [name, setName] = useState("");
   const [avatarUrl, setAvatarUrl] = useState("");
@@ -39,6 +39,7 @@ function SignUpModal() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setUser({ name: name, avatarUrl: avatarUrl });
+    setActiveModal("");
   };
 
   return (
@@ -54,7 +55,7 @@ function SignUpModal() {
           value={name}
           onChange={handleNameChange}
           type="text"
-          className="modal__input"
+          className="modal__label-input"
           id="signup-name"
           placeholder="Name"
           required
@@ -66,7 +67,7 @@ function SignUpModal() {
           value={avatarUrl}
           onChange={handleAvatarUrlChange}
           type="url"
-          className="modal__input"
+          className="modal__label-input"
           id="signup-avatar-url"
           placeholder="Avatar URL"
           required
@@ -78,7 +79,7 @@ function SignUpModal() {
           value={email}
           onChange={handleEmailChange}
           type="email"
-          className="modal__input"
+          className="modal__label-input"
           id="signup-email"
           placeholder="Email"
           required
@@ -90,7 +91,7 @@ function SignUpModal() {
           value={password}
           onChange={handlePasswordChange}
           type="password"
-          className="modal__input"
+          className="modal__label-input"
           id="signup-password"
           placeholder="Password"
           required

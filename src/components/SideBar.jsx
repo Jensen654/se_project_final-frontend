@@ -64,36 +64,33 @@ function SideBar() {
   };
 
   return (
-    <div className="profile__side-bar">
-      <div className="profile__side-bar_user">
+    <section className="side-bar">
+      <div className="side-bar__user">
         <img
-          className="profile__side-bar_image"
+          className="side-bar__user-image"
           src={user.avatarUrl.length > 0 ? user.avatarUrl : null}
           alt="UserImage"
         />
-        <h2 className="profile__side-bar_name">{user.name}</h2>
+        <h2 className="side-bar__user-name">{user.name}</h2>
       </div>
       <button
         onClick={handleEditClick}
-        className="profile__side-bar_button"
+        className="side-bar__button"
         type="button"
       >
         Edit Profile
       </button>
       <button
         onClick={handleLogOutClick}
-        className="profile__side-bar_button"
+        className="side-bar__button"
         type="button"
       >
         Log Out and Delete
       </button>
-      <form
-        className="profile__side-bar_pokemon-search"
-        onSubmit={handleSubmit}
-      >
+      <form className="side-bar__form" onSubmit={handleSubmit}>
         <label
           htmlFor="profile__side-bar_input"
-          className="profile__side-bar_label"
+          className="side-bar__form-label"
         >
           Search for Pokemon by Pokedex Number!{" "}
           <input
@@ -101,16 +98,16 @@ function SideBar() {
             onChange={handleFormChange}
             type="number"
             id="profile__side-bar_input"
-            className="profile__side-bar_input"
+            className="side-bar__form-input"
             placeholder="Ex. 380"
             required
           />
         </label>
-        <button className="profile__side-bar_submit-button" type="submit">
+        <button className="side-bar__form-submit" type="submit">
           Search
         </button>
       </form>
-    </div>
+    </section>
   );
 }
 

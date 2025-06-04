@@ -11,7 +11,8 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  animation: spin 0.75s infinite linear;
+  animation: spin 2s infinite linear;
+  /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 @keyframes spin {
