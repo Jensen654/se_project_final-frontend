@@ -6,7 +6,8 @@ import "./blocks/PokemonModal.css";
 
 function PokemonModal() {
   const { pokemon, activePokemonId } = useContext(PokeDataContext);
-  const { activeModal, handleCloseModalClick } = useContext(PageDataContext);
+  const { activeModal, handleCloseModalClick, stopModalPropagation } =
+    useContext(PageDataContext);
   const { favoritePokemon, setFavoritePokemon, favePokemonData } =
     useContext(UserDataContext);
 
@@ -39,8 +40,9 @@ function PokemonModal() {
       className={`pokemon-modal ${
         activeModal === "pokemon-modal" && "pokemon-modal_opened"
       }`}
+      onClick={handleCloseModalClick}
     >
-      <div className="pokemon-modal__container">
+      <div className="pokemon-modal__container" onClick={stopModalPropagation}>
         <div className="pokemon-modal__title-container">
           <button
             className={`pokemon-modal__save ${

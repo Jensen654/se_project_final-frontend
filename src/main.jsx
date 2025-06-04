@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/se_project_final-frontend/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>
