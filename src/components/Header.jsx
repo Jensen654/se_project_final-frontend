@@ -13,6 +13,7 @@ function Header() {
     <header className="header">
       <Link className="header__logo" to={"/"}>
         <img src={reactLogo} alt="Logo" />
+        <p className="header__logo-text">Home</p>
       </Link>
       <h1 className="header__title">My Pokedex</h1>
       {user?.name.length > 0 ? (

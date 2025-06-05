@@ -13,11 +13,23 @@
 
 .header a {
   flex: 1;
+  text-decoration: none;
+  color: rgb(207, 207, 234);
 }
 
 .header__logo {
   text-align: left;
   padding-left: 20px;
+  display: flex;
+}
+
+.header__logo-text {
+  padding-left: 10px;
+}
+
+.header__profile {
+  text-decoration: none;
+  max-width: 100%;
 }
 
 .header__profile-content {
@@ -42,14 +54,15 @@
 .header__title {
   color: rgb(207, 207, 234);
   text-align: center;
+  flex: 1;
 }
 
 .header__profile-name {
   color: rgb(207, 207, 234);
-}
-
-.header__profile {
-  text-decoration: none;
+  text-wrap: wrap;
+  word-wrap: break-word;
+  max-height: 75px;
+  max-width: 60%;
 }
 
 .header__button {
